@@ -9,7 +9,11 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Is VR Sexist.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Is VR Sexist" startnode="13" creator="Twine" creator-version="2.12.1" format="Harlowe" format-version="3.3.9" ifid="82103176-44D5-46BD-9BDA-4519908BDA0F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html, body {
+<tw-storydata name="Is VR Sexist" startnode="13" creator="Twine" creator-version="2.12.1" format="Harlowe" format-version="3.3.9" ifid="82103176-44D5-46BD-9BDA-4519908BDA0F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* =================================
+   GENERAL PAGE STYLING
+================================= */
+
+html, body {
   background: #0F1220;
 }
 
@@ -29,9 +33,32 @@ tw-passage {
   box-sizing: border-box;
 }
 
-/* Headings */
+/* Desktop content positioning */
+@media (min-width: 1200px) {
+  tw-story {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+  }
+
+  tw-passage {
+    width: 72%;
+    max-width: 55rem;
+    margin-left: 22%;
+    margin-right: auto;
+  }
+}
+
+/* Hide Harlowe's default undo/redo icons */
+tw-sidebar {
+  display: none;
+}
+
+/* =================================
+   HEADINGS
+================================= */
+
 h1, h2, h3 {
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -49,20 +76,10 @@ h3 {
   color: #78A9D8;
 }
 
-/* Twine links */
-tw-passage h3 tw-link {
-  color: #78A9D8;
-}
+/* =================================
+   EXTERNAL LINKS
+================================= */
 
-tw-passage h3 tw-link:hover {
-  color: #E0A0C0;
-}
-
-tw-passage tw-link.visited {
-  color: #E0A0C0;
-}
-
-/* External links */
 tw-passage a {
   color: #B9C0CE;
   font-weight: bold;
@@ -73,7 +90,10 @@ tw-passage a:hover {
   color: #78A9D8;
 }
 
-/* Images */
+/* =================================
+   IMAGES AND TABLES
+================================= */
+
 tw-passage img {
   max-width: 100%;
   height: auto;
@@ -81,15 +101,147 @@ tw-passage img {
   margin: 1.5rem auto;
 }
 
-/* Bold text */
 strong, b {
+  color: #78A9D8;
+}
+
+tw-passage table {
+  margin-top: 0;
+}
+
+/* =================================
+   MAIN PAGE PASSAGE LINKS (BUTTONS)
+================================= */
+
+tw-passage tw-link {
+  display: inline-block;
+  background: #78A9D8;
+  color: #0F1220;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Visited passage links: same text colour, pink button */
+tw-passage tw-link.visited {
+  background: #E0A0C0;
+  color: #0F1220;
+}
+
+tw-passage tw-link:hover {
+  background: #E0A0C0;
+  color: #0F1220;
+}
+
+/* link-reveal links sit inside a tw-hook: plain text links */
+tw-passage tw-hook > tw-link {
+  display: inline;
+  background: none;
+  color: #B9C0CE;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+tw-passage tw-hook > tw-link:hover {
+  background: none;
+  color: #78A9D8;
+}
+
+/* Survey link as a button */
+tw-passage a.survey-btn {
+  display: inline-block;
+  background: #78A9D8;
+  color: #0F1220;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+tw-passage a.survey-btn:hover {
+  background: #E0A0C0;
+  color: #0F1220;
+}
+
+/* =================================
+   SIDEBAR (header-tagged passage)
+================================= */
+
+tw-include[type="header"] {
+  display: block;
+  position: fixed;
+  top: 1rem;
+  left: 1%;
+  width: 18%;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: #192238;
+  border: 1px solid #26364D;
+  border-radius: 12px;
+  z-index: 100;
+}
+
+tw-include[type="header"] br {
+  display: none;
+}
+
+/* Sidebar links: plain text links (including Back) */
+tw-include[type="header"] tw-link {
+  display: block;
+  background: none;
+  color: #B9C0CE;
+  font-size: 0.85rem;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  padding: 0.25rem 0;
+  margin: 0 0 0.2rem;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+tw-include[type="header"] tw-link:hover {
+  background: none;
+  color: #78A9D8;
+  text-decoration: underline;
+}
+
+/* Visited sidebar links */
+tw-include[type="header"] tw-link.visited {
+  background: none;
   color: #E0A0C0;
 }
 
-/* Tables */
-tw-passage table {
-  margin-top: 0;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name=" Does adjusting IPD improve cybersickness symptoms? " tags="" position="800,200" size="100,100"># Does adjusting IPD improve cybersickness symptoms?
+/* =================================
+   SMALLER SCREENS
+================================= */
+
+@media (max-width: 1199px) {
+  tw-include[type="header"] {
+    position: static;
+    width: 100%;
+    max-width: 55rem;
+    max-height: 300px;
+    margin: 0 auto 2rem;
+  }
+
+  tw-passage {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="footer" color="purple"></tw-tag><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name=" Does adjusting IPD improve cybersickness symptoms? " tags="" position="800,200" size="100,100"># Does adjusting IPD improve cybersickness symptoms?
 Stanney et al. (2020) investigated whether poor headset fit could explain differences in cybersickness between men and women.
 
 ### In one experiment:
@@ -106,7 +258,7 @@ Stanney et al. (2020) investigated whether poor headset fit could explain differ
 
 These findings suggest that improving IPD compatibility could reduce disparities in cybersickness between men and women, while improving the reliability of VR research.
 
-### [[ Let&#39;s take a look at existing headsets ]] 
+[[ Let&#39;s take a look at existing headsets ]] 
 [(link-reveal: &quot;Click for Sources&quot;)[
 &lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC7805626/&quot;&gt; Virtual Reality Is Sexist: But It Does Not Have to Be&lt;/a&gt;]]</tw-passagedata><tw-passagedata pid="2" name=" Examine a VR headset. " tags="" position="1100,25" size="100,100"># Examine a VR headset.
 
@@ -114,7 +266,7 @@ Explore the Meta Quest 3 model and look for features that may not suit all users
 
 &lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt; &lt;iframe title=&quot;Meta Quest 3 photogrammetry&quot; width=&quot;100%&quot; height=&quot;480&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/5d7cd0852d9b49baad6ee5f76397a54d/embed?annotations_visible=1&quot;&gt; &lt;/iframe&gt; &lt;p style=&quot;font-size: 13px; font-weight: normal; margin: 5px; color: #9AA3B8;&quot;&gt; &lt;a href=&quot;https://sketchfab.com/3d-models/meta-quest-3-photogrammetry-5d7cd0852d9b49baad6ee5f76397a54d&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; style=&quot;font-weight: bold; color: #4C9AFF;&quot;&gt; Meta Quest 3 photogrammetry &lt;/a&gt; by &lt;a href=&quot;https://sketchfab.com/Yamtastic1312&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; style=&quot;font-weight: bold; color: #4C9AFF;&quot;&gt; Yamtastic1312 &lt;/a&gt; on &lt;a href=&quot;https://sketchfab.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; style=&quot;font-weight: bold; color: #4C9AFF;&quot;&gt;Sketchfab&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
 
-### [[Which feature do you think it is? Find out here -&gt; Interpupillary distance ]]</tw-passagedata><tw-passagedata pid="3" name=" Factors" tags="" position="900,25" size="100,100"># Contributing Factors
+[[Which feature do you think it is? Find out here -&gt; Interpupillary distance ]]</tw-passagedata><tw-passagedata pid="3" name="Factors" tags="" position="900,25" size="100,100"># Contributing Factors
 Click on the links to learn more about some potential factors influencing the gender differences in cybersickness. 
 
 * (link-reveal: &quot;Gaming experience&quot;)[
@@ -132,7 +284,7 @@ Not all VR games are made equal. For example, one study found that there was no 
 
 Headset design may also play a role.
 
-###[[ Examine a VR headset. ]]  
+[[ Examine a VR headset. ]]  
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;a href=&quot;https://www.researchgate.net/publication/351467401_Who_Are_Virtual_Reality_Headset_Owners_A_Survey_and_Comparison_of_Headset_Owners_and_Non-Owners&quot; target=&quot;_blank&quot;&gt;Who Are Virtual Reality Headset Owners? A Survey and Comparison of Headset Owners and Non-Owners&lt;/a&gt;
@@ -148,7 +300,7 @@ This video goes over how to adjust your IPD in a Meta Quest 3.
 
 &lt;iframe width=&quot;100%&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XpnYB9GoEVk?si=cxQJNku5bGhY0PzA&amp;origin=null&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;  allowfullscreen&gt;&lt;/iframe&gt;
 
-### [[ Does adjusting IPD improve cybersickness symptoms? ]]</tw-passagedata><tw-passagedata pid="5" name=" Interpupillary distance " tags="" position="1100,200" size="100,100"># Interpupillary distance (IPD) and lens fit
+[[ Does adjusting IPD improve cybersickness symptoms? ]]</tw-passagedata><tw-passagedata pid="5" name=" Interpupillary distance " tags="" position="1100,200" size="100,100"># Interpupillary distance (IPD) and lens fit
 
 &lt;img src=https://github.com/amyw143/Is-your-virtual-reality-headset-sexist/blob/main/IPD%20and%20lens%20fit%20-%20main.jpg?raw=true&gt;
 IPD is the distance between the centres of the pupils. Headset lenses must align with the user&#39;s pupils. When lens spacing differs from IPD, users may experience blur, distortion, eyestrain, and, in some cases, nausea. Adjusting your headset&#39;s IPD to your own measurements can prevent these uncomfortable effects. 
@@ -167,7 +319,7 @@ IPD ranges and mean values differ between sexes, with males tending toward a wid
 
 You can measure your IPD by standing in front of a mirror with a ruler. Placing the ruler flat against your eyebrows or right under your eyes, align the zero mark with the center of your left pupil. Read the mark that lines up with the center of your right pupil, and repeat the measurements 2 to 3 times to ensure consistency. 
 
-### [[ How do you adjust IPD? ]]
+[[ How do you adjust IPD? ]]
 
 [(link-reveal: &quot;Click for Sources&quot;)[
 &lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC7805626/&quot;&gt; Virtual Reality Is Sexist: But It Does Not Have to Be&lt;/a&gt;]]</tw-passagedata><tw-passagedata pid="6" name=" Let&#39;s take a look at existing headsets " tags="" position="600,200" size="100,100"># With these ranges in mind, let&#39;s take a look at existing headsets.
@@ -185,11 +337,11 @@ You can measure your IPD by standing in front of a mirror with a ruler. Placing 
 5. *Oculus Quest* — 56–74 mm ✗ Excludes the smallest ~7% of females
 6. *HTC Vive* — 60.5–74.4 mm ✗ Excludes the smallest ~35% of females
 7. *HTC Vive Pro* — 60.9–74 mm ✗ Excludes the smallest ~40% of females
-8. *Meta Quest 3* — 53–75 mm ✓ Fits full female range
+8. *Meta Quest 3* — 53–75 mm ✗ Does not accommodate the smallest reported female IPDs
 
 That&#39;s interesting... a good proportion of popular headsets do not account for the full female IPD range. Does that mean VR headsets are sexist?
 
-### [[ But first, how do we define sexism? -&gt;What is Sexism?]]
+[[ But first, how do we define sexism? -&gt;What is Sexism?]]
 [(link-reveal: &quot;Click for Sources&quot;)[
 &lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC7805626/&quot;&gt; Virtual Reality Is Sexist: But It Does Not Have to Be&lt;/a&gt;]]</tw-passagedata><tw-passagedata pid="7" name=" Reccomendations for VR research" tags="" position="600,800" size="100,100">## Recommendations for VR research
 
@@ -203,7 +355,7 @@ Building on the limitations identified by MacArthur et al. (2021), researchers c
 
 These recommendations can help researchers better identify individual differences in cybersickness, improve the reliability of their findings, and develop VR technologies that accommodate a broader range of users.
 
-### [[ Go Back -&gt;What is Sexism?]]  
+[[ Go Back -&gt;What is Sexism?]]  
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/3411764.3445701&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&quot;You&#39;re Making Me Sick&quot;: A Systematic Review of How Virtual Reality Research Considers Gender and Cybersickness&lt;/a&gt;
@@ -221,21 +373,23 @@ Lucky you, but you&#39;re in the minority. In one study, 65.2% of participants e
 ### Sex differences in cybersickness
 Studies also suggest women may report it more often, with estimates of the difference ranging from 20 to 40% (Stanney et al., 2020).
 
-### [[Why is it higher in women? -&gt; Factors]]
+[[Why is it higher in women?-&gt;Factors]]
 
-[(link-reveal: &quot;Click for Sources&quot;)[
+(link-reveal: &quot;Click for Sources&quot;)[
 &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/35250349/&quot; target=&quot;_blank&quot;&gt;Focusing on cybersickness: pervasiveness, latent trajectories, susceptibility, and effects on the virtual reality experience&lt;/a&gt;
-&lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC7805626/&quot;&gt; Virtual Reality Is Sexist: But It Does Not Have to Be&lt;/a&gt;]]</tw-passagedata><tw-passagedata pid="9" name="A Vision for the future" tags="" position="300,800" size="100,100"># A Vision for the Future
-
-As we look to the future of technology and design, we would like you to share your thoughts.
-
-How do you think the field can change to be more inclusionary?
-
+&lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC7805626/&quot; target=&quot;_blank&quot;&gt;Virtual Reality Is Sexist: But It Does Not Have to Be&lt;/a&gt;
+]</tw-passagedata><tw-passagedata pid="9" name="A Vision for the future" tags="" position="300,800" size="100,100"># A Vision for the Future
 &lt;img src=&quot;https://i.imgur.com/C2LpFxy.jpeg&quot; alt=&quot;Story Image&quot;&gt;
+Thank you for exploring this project. Your feedback is an important part of our study.
 
-### &lt;a href=&quot;https://ubc.ca1.qualtrics.com/jfe/form/SV_bpjnwZpK4Sm3sUu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Complete the Survey&lt;/a&gt;
+### &lt;a href=&quot;https://ubc.ca1.qualtrics.com/jfe/form/SV_bpjnwZpK4Sm3sUu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Please complete our user testing survey&lt;/a&gt;
+We are asking visitors to complete a short survey about their experience with this site. Your responses will help us evaluate how well it communicates these ideas and guide how we improve it.
 
-### [[Reflection Questions]]</tw-passagedata><tw-passagedata pid="10" name="Broad Impacts in Science and Technology" tags="" position="300,600" size="100,100">## Broad Impacts in Science and Technology
+The survey takes about 5 minutes. It is voluntary and anonymous.
+
+It also asks for your thoughts on the future: how do you think the field of technology and design can change to be more inclusive?
+
+&lt;a class=&quot;survey-btn&quot; href=&quot;https://ubc.ca1.qualtrics.com/jfe/form/SV_bpjnwZpK4Sm3sUu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Complete our user testing survey&lt;/a&gt;</tw-passagedata><tw-passagedata pid="10" name="Broad Impacts in Science and Technology" tags="" position="300,600" size="100,100">## Broad Impacts in Science and Technology
 
 Design choices that favour men or women can be reflective of the lack of consideration and opportunities provided within the field of science and technology to women.
 
@@ -257,7 +411,7 @@ Percent of Women Faculty at Yale by Department (I. Singh, 2020).
 * F&amp;ES: 19.2% women
 * Total STEM: 38.3% women
 
-###[[ Go Back -&gt;What is Sexism?]]   
+[[ Go Back -&gt;What is Sexism?]]   
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;br&gt;
@@ -273,7 +427,7 @@ Through a lack of gender reporting and possible participant selection bias, fema
 src=https://i.imgur.com/AqLt6Xd.jpeg
 &lt;/div&gt;
 
-###[[ Reccomendations for VR research]] 
+[[ Reccomendations for VR research]] 
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;br&gt;
@@ -295,7 +449,7 @@ Men are seen in institutions as having more potential (Benson et al., 2023) than
 
 This potential is seen in industry as well as academia (Moss-Racusin et al., 2012), resulting in fewer opportunities for women to be key decision-makers in the design and development of products (Benson et al., 2023).
 
-### [[ Go Back -&gt;What is Sexism?]]  
+[[ Go Back -&gt;What is Sexism?]]  
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;br&gt;
@@ -314,7 +468,7 @@ Can hardware that looks neutral still fit some users better than others?
 
 &lt;img src=&quot;https://i.imgur.com/K95OsI8.jpeg&quot; alt=&quot;Person wearing a VR headset&quot; style=&quot;max-width:100%;&quot;&gt;
 
-### [[Begin-&gt; What is Cybersickness?]]</tw-passagedata><tw-passagedata pid="14" name="Personal Sexism" tags="" position="100,600" size="100,100">## Personal Sexism
+[[Begin-&gt; What is Cybersickness?]]</tw-passagedata><tw-passagedata pid="14" name="Personal Sexism" tags="" position="100,600" size="100,100">## Personal Sexism
 
 Manne (2018) describes sexism at a personal level as the belief of women&#39;s inferiority, non-importance, and subservience to men 
 
@@ -331,7 +485,7 @@ src=https://i.imgur.com/mMRDviJ.jpeg
 
 An unwelcoming workplace causes people to leave, taking their unique insights and opinions with them. Without diverse input and open dialogue, product design may suffer. 
 
-###[[ Go Back -&gt;What is Sexism?]]  
+[[ Go Back -&gt;What is Sexism?]]  
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;br&gt;
@@ -349,15 +503,17 @@ Try to think of the type of sexism before revealing the answer.
 a) A new virtual reality headset is out that is too big for most women to see properly through the lens. (link-reveal: &quot;What type of sexism could this be?&quot;)[
 Sexism in Design]
 
-b) Despite high technological abilities, the manager consistently asks Jen to take notes because her writing is so neat. What type of sexism could this be? (link-reveal: &quot;What type of sexism could this be?&quot;)[ Personal sexism]
+b) Despite high technological abilities, the manager consistently asks Jen to take notes because her writing is so neat. What type of sexism could this be? (link-reveal: &quot;What type of sexism could this be?&quot;)[ 
+Personal sexism]
 
 c) A studio head says that they don&#39;t like women main characters in their video games because they do not usually sell well and it&#39;s too much of a risk to make one. What type of sexism could this be? (link-reveal: &quot;What type of sexism could this be?&quot;)[
 Institutional sexism]
 
-d) Only men may use the latest cutting-edge virtual reality flight simulator due to the g-forces being hypothesized to be too intense for women? (link-reveal: &quot;What type of sexism could this be?&quot;)[ Sexism in Design]
+d) Only men may use the latest cutting-edge virtual reality flight simulator due to the g-forces being hypothesized to be too intense for women? (link-reveal: &quot;What type of sexism could this be?&quot;)[
+Sexism in Design]
 
-### [[ Review again -&gt;What is Sexism?]] 
-### [[A Vision for the future]]</tw-passagedata><tw-passagedata pid="16" name="Sexism at a Scientific Level" tags="" position="700,600" size="100,100">## Sexism at a Scientific Level
+[[ Review again -&gt;What is Sexism?]] 
+[[A Vision for the future]]</tw-passagedata><tw-passagedata pid="16" name="Sexism at a Scientific Level" tags="" position="700,600" size="100,100">## Sexism at a Scientific Level
 
 Sexism at a scientific level either ignores biological differences or reinforces them as a reason to provide more resources and opportunities to men. These biases can also influence how research is conducted and whose experiences are represented.
 
@@ -373,8 +529,7 @@ The authors also highlighted the possibility of underrepresentation of female pa
 
 Together, these limitations make it difficult to establish whether women experience cybersickness differently from men. When scientific research fails to account for the diversity of its participants, its findings risk reflecting only a subset of the population rather than being representative of everyone. 
 
-###[[Flight simulator case study]]
-###[[ Go Back -&gt;What is Sexism?]] 
+[[Flight simulator case study]]
 
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;br&gt;
@@ -383,7 +538,7 @@ Together, these limitations make it difficult to establish whether women experie
 • &lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/3411764.3445701&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&quot;You&#39;re Making Me Sick&quot;: A Systematic Review of How Virtual Reality Research Considers Gender and Cybersickness&lt;/a&gt;
 &lt;br&gt;
 • &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/32070984/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;PubMed record&lt;/a&gt;
-]</tw-passagedata><tw-passagedata pid="17" name="Sexism in Design" tags="" position="600,400" size="100,100">## Sexism in Design
+]</tw-passagedata><tw-passagedata pid="17" name="Sexism in Design" tags="" position="650,475" size="100,100">## Sexism in Design
 
 Sexism in the design according to Criado Perez (2019) is the impact of technological products in which unconsciousness and consciousness bias (I methodology) result in products, services and technology less suited to serve women.
 
@@ -398,7 +553,7 @@ Figure 5: Each icon is aligned with the gender of 50 participants from human-sub
 
 An almost 2 male to 1 female participant ration exists at the conference, potentially skeweing the virtual reality research. With Peck et al (2020) and Kelly et al (2023) finding that as sample size that included women went up findings of motion sickness went up.
 
-### [[ Go Back -&gt;What is Sexism?]]  
+[[ Go Back -&gt;What is Sexism?]]  
 (link-reveal: &quot;Click for Sources&quot;)[
 - &lt;a href=&quot;https://carolinecriadoperez.com/book/invisible-women/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color: #ff69b4;&quot;&gt;Invisible women: data bias in a world designed for men.&lt;/a&gt;
 - &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/32070984/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color: #ff69b4;&quot;&gt;Mind the Gap: The Underrepresentation of Female Participants and Authors in Virtual Reality Research&lt;/a&gt;
@@ -419,7 +574,7 @@ In Detroit: Become Human, highly sexualized depictions of women and scenes of ge
 src=https://i.imgur.com/1pj6o3h.jpeg
 &lt;/div&gt;
 
-### [[ Go Back -&gt;What is Sexism?]]  
+[[ Go Back -&gt;What is Sexism?]]  
 (link-reveal: &quot;Click for Sources&quot;)[
 &lt;br&gt;
 • &lt;a href=&quot;https://www.mdpi.com/2076-328x/16/3/319&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;A Metasynthesis on Perceptions of Sexism Among Video Game Players and the Video Game Industry&lt;/a&gt;
@@ -435,17 +590,42 @@ src=https://i.imgur.com/1pj6o3h.jpeg
 
 Sexism is defined by Swim et al. (2001) as operating as a system of beliefs, language, and behaviors that treat women unfairly based on their gender, expressing itself through everyday stereotyping, patronizing comments, or structural barriers that privilege men over women and gender diverse people.
 
-* ### [[Institutional Sexism]] 
-* ### [[Personal Sexism]] 
-* ### [[Sexism in Design]]
-* ### [[Sexism at a Scientific Level]] 
-* ###[[Sexism in Video Game Design]]
-* ### [[Broad Impacts in Science and Technology]]
-* ### [[Reflection Questions]] 
-* ### [[A Vision for the future]] 
+[[Institutional Sexism]] 
+[[Personal Sexism]] 
+[[Sexism in Design]]
+[[Sexism at a Scientific Level]] 
+[[Sexism in Video Game Design]] 
+[[Broad Impacts in Science and Technology]]
+[[Reflection Questions]] 
+[[A Vision for the future]] 
 
 (link-reveal: &quot;Click for Sources&quot;)[
-&lt;a href=&quot;https://spssi.onlinelibrary.wiley.com/doi/10.1111/0022-4537.00200&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Everyday Sexism: Evidence for Its Incidence, Nature, and Psychological Impact From Three Daily Diary Studies&lt;/a&gt;]</tw-passagedata></tw-storydata>
+&lt;a href=&quot;https://spssi.onlinelibrary.wiley.com/doi/10.1111/0022-4537.00200&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Everyday Sexism: Evidence for Its Incidence, Nature, and Psychological Impact From Three Daily Diary Studies&lt;/a&gt;]</tw-passagedata><tw-passagedata pid="20" name="Sidebar" tags="header" position="1400,300" size="100,100">&#39;&#39;Table of Contents&#39;&#39;
+
+&#39;&#39;Cybersickness&#39;&#39;
+[[Is your virtual reality headset sexist? ]] 
+[[ What is Cybersickness?]]
+[[Contributing Factors -&gt;Factors]] 
+
+&#39;&#39;VR Headsets and Interpupillary Distance&#39;&#39;
+[[ Examine a VR headset. ]] 
+[[ Interpupillary distance and lens fit -&gt; Interpupillary distance ]] 
+[[ How do you adjust IPD? ]]
+[[ Does adjusting IPD improve cybersickness symptoms? ]]
+[[ Let&#39;s take a look at existing headsets ]]
+
+&#39;&#39;Types of Sexism&#39;&#39;
+[[What is Sexism?]]
+[[Institutional Sexism]]
+[[Personal Sexism]]
+[[Sexism at a Scientific Level]]
+[[Sexism in Design]]
+[[Sexism in Video Game Design]]
+
+&#39;&#39;Looking forward&#39;&#39;
+[[Broad Impacts in Science and Technology]]
+[[A Vision for the future]]
+[[Reflection Questions]]</tw-passagedata><tw-passagedata pid="21" name="Int" tags="" position="1400,425" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
