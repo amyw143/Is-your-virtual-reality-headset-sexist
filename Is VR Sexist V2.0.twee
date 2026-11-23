@@ -1,5 +1,5 @@
 :: StoryTitle
-Is VR Sexist
+Is VR Sexist 1.6
 
 
 :: StoryData
@@ -168,7 +168,7 @@ It also asks for your thoughts on the future: how do you think the field of tech
 <a class="survey-btn" href="https://ubc.ca1.qualtrics.com/jfe/form/SV_bpjnwZpK4Sm3sUu" target="_blank" rel="noopener noreferrer">Complete our user testing survey</a>
 
 
-:: Broad Impacts in Science and Technology {"position":"300,600","size":"100,100"}
+:: Broad Impacts in Science and Technology {"position":"250,600","size":"100,100"}
 ## Broad Impacts in Science and Technology
 
 Design choices that favour men or women can be reflective of the lack of consideration and opportunities provided within the field of science and technology to women.
@@ -283,10 +283,6 @@ This potential is seen in industry as well as academia (Moss-Racusin et al., 201
 ]
 
 
-:: Int {"position":"1400,425","size":"100,100"}
-
-
-
 :: Is your virtual reality headset sexist?\  {"position":"500,25","size":"100,100"}
 # Is your VR headset sexist?
 
@@ -331,7 +327,7 @@ An unwelcoming workplace causes people to leave, taking their unique insights an
 ]
 
 
-:: Reflection Questions {"position":"425,725","size":"100,100"}
+:: Reflection Questions {"position":"400,700","size":"100,100"}
 ## Reflection Questions
 
 Try to think of the type of sexism before revealing the answer.
@@ -384,9 +380,13 @@ Together, these limitations make it difficult to establish whether women experie
 :: Sexism in Design {"position":"650,475","size":"100,100"}
 ## Sexism in Design
 
-Sexism in the design according to Criado Perez (2019) is the impact of technological products in which unconsciousness and consciousness bias (I methodology) result in products, services and technology less suited to serve women.
+Sexism in design, according to Criado Perez (2019), is the impact of technological products in which unconsciousness and consciousness bias (I methodology) result in products, services and technology less suited to serve women.
 
-The disparity between men and women within virtual reality research results in studies that can reinforce sexist product design
+Intentional or not, this bias limits who can use a product comfortably. As we saw earlier, commercial VR headsets accommodate a higher percentage of men's IPDs than women's.
+
+One potential factor contributing to design bias is that women are less likely to be involved in the design process. If VR hardware and software does not take female users' needs into account, they may be less likely to engage with the technology and develop their interests in the field. 
+
+Indeed, an analysis of gender across 1,425 authors across 320 manuscripts in the Proceedings of the IEEE Virtual Reality Conferences found that only 16% were female (Peck et al., 2020). Over half of the included manuscripts (54%) included no female authors. 
 
 </style>
 <img
@@ -395,17 +395,15 @@ src=https://i.imgur.com/nendVcg.png
 
 Figure 5: Each icon is aligned with the gender of 50 participants from human-subject experiments in the Proceedings of the IEEE Virtual Reality Conferences from 2015-2019.
 
-An almost 2 male to 1 female participant ration exists at the conference, potentially skeweing the virtual reality research. With Peck et al (2020) and Kelly et al (2023) finding that as sample size that included women went up findings of motion sickness went up.
+An almost 2 male to 1 female participant ratio exists at this VR conference throughout the years, representing unequal representation of sexes. When studies include at least one female author however, Peck et al. (2020) found a significantly greater representation of female participants. 
+
+A core principle of human-subject research is that samples should represent the population of interest. When they don't, conclusions and designs risk excluding the people they are meant to serve. Addressing this starts with including women at every stage, from the research team to the participant pool.
 
 [[ Go Back ->What is Sexism?]]  
 (link-reveal: "Click for Sources")[
 - <a href="https://carolinecriadoperez.com/book/invisible-women/" target="_blank" rel="noopener noreferrer" style="color: #ff69b4;">Invisible women: data bias in a world designed for men.</a>
 - <a href="https://pubmed.ncbi.nlm.nih.gov/32070984/" target="_blank" rel="noopener noreferrer" style="color: #ff69b4;">Mind the Gap: The Underrepresentation of Female Participants and Authors in Virtual Reality Research</a>
-- <a href="https://dr.lib.iastate.edu/server/api/core/bitstreams/d9617edf-5a7b-4fef-910a-1af7f9e04f00/content" target="_blank" rel="noopener noreferrer" style="color: #ff69b4;">Gender differences in cybersickness: Clarifying confusion and identifying paths forward</a>
 ]
-
-
-
 
 
 :: Sexism in Video Game Design {"position":"500,600","size":"100,100"}
@@ -437,7 +435,7 @@ src=https://i.imgur.com/1pj6o3h.jpeg
 ]
 
 
-:: Sidebar [header] {"position":"1400,300","size":"100,100"}
+:: Sidebar [header] {"position":"1600,300","size":"100,100"}
 ''Table of Contents''
 
 ''Cybersickness''
@@ -464,6 +462,21 @@ src=https://i.imgur.com/1pj6o3h.jpeg
 [[Broad Impacts in Science and Technology]]
 [[A Vision for the future]]
 [[Reflection Questions]]
+
+<div id="toc-audio-widget">
+<hr>
+<h4 class="audio-heading">Music</h4>
+<p id="track-title">The Farmhouse - Silver Maple</p>
+<div class="player-controls">
+<button onclick="window.prevTrack()">⏮</button>
+<button onclick="window.bgAudio.play()">▶</button>
+<button onclick="window.bgAudio.pause()">⏸</button>
+<button onclick="window.nextTrack()">⏭</button>
+</div>
+<input id="vol-slider" type="range" min="0" max="1" step="0.05" value="0.5" oninput="window.setVolume(this.value)">
+<p class="audio-source"><a href="https://www.epidemicsound.com/playlist/u597oqx39na3jd6ednzhm71gfmlggu40/" target="_blank" rel="noopener noreferrer">Playlist &amp; Sources</a></p>
+</div>
+<script>if(!window.bgAudio){window.catboxBase="https:\x2F\x2Ffiles.catbox.moe/";window.ids="fd96in;3byslo;bja0i5;wxmkiv;ltcyon;bwky56;xau3dm;uvoztz".split(";");window.titles="The Farmhouse - Silver Maple;Happiness - Shuta Yasukochi;All Parts Equal - Airae;Trace - Lennon Hutton;Open Road - Lennon Hutton;Fragment - Lennon Hutton;Mindscape - Lennon Hutton;Miles - Out To The World".split(";");window.trackIndex=0;window.bgAudio=new Audio(window.catboxBase+window.ids.at(0)+".mp3");window.bgAudio.volume=0.5;window.syncPlayer=function(){var l=document.getElementById("track-title");if(l)l.textContent=window.titles.at(window.trackIndex);var s=document.getElementById("vol-slider");if(s)s.value=window.bgAudio.volume;};window.loadTrack=function(i){var n=window.ids.length;window.trackIndex=(i+n)%n;window.bgAudio.src=window.catboxBase+window.ids.at(window.trackIndex)+".mp3";window.bgAudio.play();window.syncPlayer();};window.nextTrack=function(){window.loadTrack(window.trackIndex+1);};window.prevTrack=function(){window.loadTrack(window.trackIndex-1);};window.setVolume=function(v){window.bgAudio.volume=v;};window.bgAudio.addEventListener("ended",window.nextTrack);document.addEventListener("click",function(){if(window.bgAudio.paused){window.bgAudio.play().catch(function(){});}},{once:true});}window.syncPlayer();</script>
 
 
 :: What is Sexism? {"position":"400,400","size":"100,100"}
@@ -698,6 +711,73 @@ tw-include[type="header"] tw-link:hover {
 tw-include[type="header"] tw-link.visited {
   background: none;
   color: #E0A0C0;
+}
+
+/* =================================
+   SIDEBAR AUDIO PLAYER
+================================= */
+
+#toc-audio-widget hr {
+  border: none;
+  border-top: 1px solid #26364D;
+  margin: 1.25rem 0 1rem;
+}
+
+#track-title {
+  color: #78A9D8;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.6rem;
+}
+
+.player-controls {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.player-controls button {
+  flex: 1;
+  background: #78A9D8;
+  color: #0F1220;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.player-controls button:hover {
+  background: #E0A0C0;
+}
+
+#vol-slider {
+  width: 100%;
+  accent-color: #E0A0C0;
+  cursor: pointer;
+}
+
+.audio-heading {
+  color: #E0A0C0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+.audio-source {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+}
+
+.audio-source a {
+  color: #B9C0CE;
+  font-weight: normal;
+}
+
+.audio-source a:hover {
+  color: #78A9D8;
 }
 
 /* =================================
